@@ -59,9 +59,7 @@ var mergeKLists = function(lists) {
 
 // 从中序与后序遍历序列构造二叉树
 var buildTree = function(inorder, postorder) {
-    if(inorder.length === null || postorder.length === null) {
-        return null
-    }
+    if(!inorder.length) return null
     const n = postorder.length
     var temp = postorder[n - 1]
     var mid = inorder.indexOf(temp)
